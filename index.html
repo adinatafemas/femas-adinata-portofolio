@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio profesional Femas Adinata, lulusan Sistem Informasi STMIK Kaputama.">
+  <title>Femas Adinata | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#090909;--panel:#121212;--panel2:#171717;--gold:#d6b36a;--gold2:#f0d99f;--text:#f5f2eb;--muted:#aaa49a;--line:rgba(214,179,106,.22)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.7}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,90%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(9,9,9,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:700;letter-spacing:.12em}.brand span{color:var(--gold)}
+    .navlinks{display:flex;gap:28px;color:#c9c3b8;font-size:.9rem}.navlinks a:hover{color:var(--gold)}
+    .hero{min-height:650px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:50px;padding:90px 0}
+    .eyebrow{color:var(--gold);letter-spacing:.22em;text-transform:uppercase;font-size:.75rem;font-weight:700}
+    h1,h2,h3{margin:0;line-height:1.15}h1{font:700 clamp(3.2rem,7vw,6.2rem)/1.05 "Playfair Display",serif;margin:18px 0 22px;letter-spacing:-.04em}
+    h1 span{color:var(--gold)}.lead{max-width:610px;color:var(--muted);font-size:1.08rem}
+    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}.btn{padding:12px 22px;border-radius:4px;font-weight:700;font-size:.9rem;transition:.2s}
+    .portrait {
+    min-height: 390px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    background: #121212;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.portrait small {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #f0d99f;
+    letter-spacing: .2em;
+    white-space: nowrap;
+    background: rgba(0,0,0,.65);
+    padding: 6px 12px;
+}
+    .btn-gold{background:var(--gold);color:#17130b}.btn-gold:hover{background:var(--gold2);transform:translateY(-2px)}
+    .btn-outline{border:1px solid var(--line);color:var(--gold)}.btn-outline:hover{background:rgba(214,179,106,.08)}
+    .portrait{min-height:390px;border:1px solid var(--line);border-radius:8px;background:radial-gradient(circle at 50% 35%,rgba(214,179,106,.18),transparent 42%),linear-gradient(145deg,#1b1a17,#0d0d0d);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .portrait:before,.portrait:after{content:"";position:absolute;border:1px solid rgba(214,179,106,.18);border-radius:50%;width:290px;height:290px}
+    .portrait:after{width:370px;height:370px}.monogram{font:700 7rem "Playfair Display",serif;color:var(--gold);z-index:1;text-shadow:0 10px 40px #000}
+    .portrait small{position:absolute;bottom:22px;letter-spacing:.2em;color:#b7a47c;font-size:.65rem}
+    section{padding:82px 0;border-top:1px solid rgba(255,255,255,.06)}.section-head{margin-bottom:34px}.section-head h2{font:600 clamp(2rem,4vw,3rem) "Playfair Display",serif;margin-top:10px}.section-head p{color:var(--muted);max-width:650px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}.card{background:var(--panel);border:1px solid rgba(255,255,255,.07);padding:28px;border-radius:7px}
+    .card h3{font-size:1.08rem;margin-bottom:12px}.card p{margin:0;color:var(--muted)}
+    .edu{display:flex;gap:18px;align-items:flex-start}.edu-icon{width:48px;height:48px;flex:none;border:1px solid var(--line);display:grid;place-items:center;color:var(--gold);border-radius:5px;font-size:1.25rem}
+    .edu h3{margin:2px 0 7px}.edu .sub{color:var(--muted);font-size:.92rem}.gpa{display:inline-block;margin-top:12px;color:var(--gold2);font-weight:700;font-size:.9rem}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}.stat{padding:22px;background:var(--panel2);border:1px solid rgba(214,179,106,.14);border-radius:6px}.stat strong{display:block;font:700 1.8rem "Playfair Display",serif;color:var(--gold)}.stat span{font-size:.82rem;color:var(--muted)}
+    .skills-note{color:var(--muted);font-size:.9rem;margin-top:14px}.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.chip{border:1px solid var(--line);color:#dfc58f;border-radius:30px;padding:7px 13px;font-size:.84rem}
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{min-height:180px;display:flex;flex-direction:column;justify-content:space-between}.project .tag{color:var(--gold);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase}.project p{color:var(--muted);margin:10px 0 0}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.contact-box{padding:28px;background:linear-gradient(135deg,#191711,#111);border:1px solid var(--line);border-radius:7px}.contact-box p{color:var(--muted)}
+    .contact-list{display:grid;gap:12px;color:#ddd5c7}.contact-list span{color:var(--gold);display:inline-block;width:85px}
+    footer{padding:28px 0;color:#817b70;font-size:.82rem;border-top:1px solid rgba(255,255,255,.07)}footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    @media(max-width:760px){.navlinks{gap:13px;font-size:.78rem}.hero{grid-template-columns:1fr;padding:68px 0;gap:30px}.portrait{min-height:260px}.monogram{font-size:5rem}.about-grid,.contact{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.project-grid{grid-template-columns:1fr}section{padding:62px 0}}
+    @media(max-width:430px){.navlinks a:nth-child(2){display:none}.nav{height:66px}.stats{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav aria-label="Navigasi utama">
+      <a class="brand" href="#home">FEMAS<span>.</span></a>
+      <div class="navlinks">
+        <a href="#tentang">Tentang</a><a href="#pendidikan">Pendidikan</a><a href="#keahlian">Keahlian</a><a href="#pengalaman">Pengalaman</a><a href="#kontak">Kontak</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <section class="hero" id="home" style="border:0">
+      <div>
+        <div class="eyebrow">Personal Portfolio</div>
+        <h1>Femas<br><span>Adinata.</span></h1>
+        <p class="lead">Lulusan S1 Sistem Informasi dari STMIK Kaputama dengan IPK 3,63. Tertarik pada dunia teknologi informasi, pengelolaan sistem, dan pengembangan solusi digital.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="#kontak">Hubungi Saya</a>
+          <a class="btn btn-outline" href="#tentang">Lihat Profil</a>
+        </div>
+      </div>
+      <div class="portrait">
+          <img src="femas.jpg" alt="Foto Femas Adinata" class="profile-photo">
+          <small>INFORMATION SYSTEMS</small>
+      </div>
+    </section>
+
+    <section id="tentang">
+      <div class="section-head"><div class="eyebrow">01 / About Me</div><h2>Tentang Saya</h2>
+        <p>Profil singkat dan latar belakang pendidikan.</p></div>
+      <div class="about-grid">
+        <div class="card">
+          <h3>Profil Profesional</h3>
+          <p>Saya adalah lulusan Sistem Informasi yang memiliki ketertarikan pada pemanfaatan teknologi untuk mendukung kebutuhan organisasi dan aktivitas bisnis. Saya siap mengembangkan pengetahuan, mempelajari hal baru, serta berkontribusi secara profesional dalam lingkungan kerja.</p>
+        </div>
+        <div class="card">
+          <h3>Fokus & Minat</h3>
+          <p>Minat pada bidang sistem informasi, teknologi digital, pengolahan informasi, dan pemecahan masalah melalui pendekatan yang terstruktur.</p>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>3,63</strong><span>IPK</span></div>
+        <div class="stat"><strong>S1</strong><span>Jenjang Pendidikan</span></div>
+        <div class="stat"><strong>SI</strong><span>Program Studi</span></div>
+      </div>
+    </section>
+
+    <section id="pendidikan">
+      <div class="section-head"><div class="eyebrow">02 / Education</div><h2>Pendidikan</h2></div>
+      <div class="card edu">
+        <div class="edu-icon">✦</div>
+        <div>
+          <h3>STMIK Kaputama</h3>
+          <div class="sub">Sarjana (S1) · Sistem Informasi</div>
+          <div class="gpa">Indeks Prestasi Kumulatif: 3,63</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="keahlian">
+      <div class="section-head"><div class="eyebrow">03 / Skills</div><h2>Keahlian & Kompetensi</h2>
+        <p>Bagian ini dapat disesuaikan dengan kemampuan yang benar-benar dikuasai.</p></div>
+      <div class="card">
+        <h3>Bidang yang diminati</h3>
+        <div class="chips">
+          <span class="chip">Sistem Informasi</span><span class="chip">Teknologi Informasi</span><span class="chip">Pengolahan Data</span><span class="chip">Administrasi Digital</span><span class="chip">Pemecahan Masalah</span>
+        </div>
+        <p class="skills-note">Tambahkan tools atau kemampuan teknis yang dikuasai, misalnya Microsoft Office, Excel, SQL, desain, pemrograman, atau aplikasi lain sesuai pengalaman.</p>
+      </div>
+    </section>
+
+    <section id="pengalaman">
+    <div class="section-head">
+        <div class="eyebrow">04 / Work Experience</div>
+        <h2>Pengalaman Kerja</h2>
+        <p>Pengalaman kerja dan praktik lapangan yang telah saya jalani untuk mengembangkan kemampuan serta pengalaman profesional.</p>
+    </div>
+
+    <div class="project-grid">
+
+        <div class="card project">
+            <div>
+                <div class="tag">Experience 01 · 2022</div>
+                <h3 style="margin-top:12px">Kasir</h3>
+                <p>
+                    Mei 2022 – September 2022
+                </p>
+                <p style="margin-top:12px">
+                    Bertanggung jawab dalam melayani transaksi pelanggan,
+                    mengelola pembayaran, melakukan pencatatan transaksi,
+                    serta memberikan pelayanan yang baik kepada pelanggan.
+                </p>
+            </div>
+        </div>
+
+        <div class="card project">
+            <div>
+                <div class="tag">Experience 02 · 2025</div>
+                <h3 style="margin-top:12px">Magang – Samsat Kota Binjai</h3>
+                <p>
+                    Juli 2025 – Agustus 2025
+                </p>
+                <p style="margin-top:12px">
+                    Mengikuti kegiatan praktik kerja lapangan di Samsat
+                    Kota Binjai, membantu kegiatan administrasi,
+                    pengelolaan dokumen, serta mengenal proses pelayanan
+                    administrasi kepada masyarakat.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <section id="kontak">
+      <div class="contact">
+        <div><div class="eyebrow">05 / Get In Touch</div><h2 style="font:600 clamp(2rem,4vw,3rem) 'Playfair Display',serif;margin-top:12px">Mari Terhubung.</h2>
+          <p style="color:var(--muted)">Terbuka untuk kesempatan kerja, kolaborasi, dan pengembangan profesional.</p></div>
+        <div class="contact-box">
+          <h3>Informasi Kontak</h3>
+          <p>Ganti bagian berikut dengan informasi kontak aktif Anda.</p>
+          <div class="contact-list">
+            <div><span>Email</span> adinataqu.12@gmail.com</div>
+            <div><span>Telepon</span> +62 857-5868-2398</div>
+            <!-- <div><span>LinkedIn</span> linkedin.com/in/username</div> -->
+            <div><span>Lokasi</span>Langkat, Indonesia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+<footer><div class="wrap"><span>© 2026 Femas Adinata. All rights reserved.</span><span>Designed with purpose · Black & Gold</span></div></footer>
+</body>
+</html>
